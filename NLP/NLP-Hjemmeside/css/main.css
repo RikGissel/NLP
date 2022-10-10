@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body, html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p{
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 0 15px;
+}
+
+#main_txt{
+  font-size: 2em;
+}
+
+/* ScrollBar styling start */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+	background-color: #F5F5F5;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #0ae;
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
+
+/* ScrollBar styling end */
+
+/* Back to top button styling start */
+
+.backToTop{
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 3em;
+  z-index: 5;
+  height: 50px;
+  width: 50px;
+}
+.backToTop i{
+  position: absolute;
+  top: 10px;
+  right: 12.5px;
+  font-size: 30px;
+  color: green;
+}
+.backToTop i:hover{
+  color: red;
+  transform: rotate(360deg);
+  transition: 1s ease;
+}
+
+/* Back to top button styling end */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  position: fixed;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.logo img {
+  cursor: pointer;
+  width: 42.5%;
+  height: 42.5%;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__link {
+  margin: 0 10px;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 100px;
+  transition: all 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.nav__link.active,
+.nav__link:hover {
+  background-color: #3f2b96;
+  color: white;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
+}
+
+#home{
+  background-image: url(../assets/New-York-City.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+}
+
+#walking_robot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+}
+
+#flying_plane{
+  position: absolute;
+  width: 225px;
+  right: 0;
+}
+
+#intro div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  flex-direction: column;
+}
+
+#example div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  flex-direction: column;
+}
+
+#future{
+  background-image: url(../assets/Technology.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#future div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 30rem;
+  width: 902px;
+  background-color: lightblue;
+}
+
+#footer div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+}
+
+.right_box3{
+  background-image: url(../assets/Logistics.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.left_box1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 10px;
+  width: 15rem;
+  height: 3rem;
+  border: 3px solid #3f2b96;
+  background-image: -webkit-linear-gradient(30deg, #3f2b96 60%, transparent 60%);
+  background-image: linear-gradient(30deg, #3f2b96 60%, transparent 60%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
+}
+.left_box1 a:hover {
+  background-position: 130%;
+  color: #3f2b96;
+}
+
+.right_box1{
+  background: #a8c0ff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+}
+
+.left_box2{
+  background-image: url(../assets/Robots.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.btn{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #3f2b96;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #3f2b96;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  width: 12.2rem;
+  height: 3rem;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before{
+  background: #3f2b96;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btn4::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+.btn4:hover::before{
+  height: 380%;
+}
+
+.btn4:hover{
+  color: white;
+}
+
+/* Disappear class makes robot vanish */
+.disappear{
+  display: none;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 232px;
+  background-color: #3f2b96;
+}
+
+.copyright_txt{
+  color: white;
+  font-size: 1.8rem;
+  padding-top: 25px;
+}
+
+/* MEDIA QUERIES START */
+@media (max-width: 1024px){
+  .section{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .box{
+    width: 100% !important;
+    overflow: hidden;
+  }
+
+  #future > div{
+    width: 100% !important;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .section{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .box{
+    width: 100% !important;
+    overflow: hidden;
+  }
+
+  #future > div{
+    width: 100% !important;
+  }
+
+}
+
+@media (max-width: 546px){
+  .right_box2 > h1{
+    font-size: 2.5rem;
+  }
+}
+/* MEDIA QUERIES END */
